@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Zoo Animals</title>
+
   <script>
 
     function showZooAnimal(fileName) {
@@ -16,31 +17,40 @@
 
     }
 
-    function displayMessage(){
-      var helpMsg;
-      msg = document.getElementById("helpButton");
-      msg.form.displayMessage("You can contact the site creater at zoopage@zoopages.com");
+    function displayMessage() {
+      alert("You can contact the site creater at zoopage@zoopages.com");
+    }
+
+    function imageMessage() {
+        alert('Nice Choice!');
     }
   </script>
 </head>
 
+<style>
+    #zooAnimal:hover {
+        transform: scale(2);
+    }
+</style>
 
 <body>
   <h1>Zoo Animals</h1>
   Press a button to see the corresponding animal. <br>
 
-  <img id="zooAnimal" src="Bear.jpg" width = "400" height="400" onclick="alert('Nice Choice!')" onmouseover="">
+  <img id="zooAnimal" src="Bear.jpg" width = "400" height="400" onclick="imageMessage()"/>
+  
   
   <form>
-    <input type="button" value="Bear" onclick="showZooAnimal('Bear.jpg');">
-    <input type="button" value="Elephant" onclick="showZooAnimal('Elephant.jpg');">
-    <input type="button" value="Panda" onclick="showZooAnimal('Panda.jpg');">
-    <input type="button" value="Rhino" onclick="showZooAnimal('Rhino.jpg');">
-    <input type="button" value="Tiger" onclick="showZooAnimal('Tiger.jpg');"> <br>
+    
+    <input type="button" value="Bear" onclick="showZooAnimal('Bear.jpg');"/>
+    <input type="button" value="Elephant" onclick="showZooAnimal('Elephant.jpg');"/>
+    <input type="button" value="Panda" onclick="showZooAnimal('Panda.jpg');"/>
+    <input type="button" value="Rhino" onclick="showZooAnimal('Rhino.jpg');"/>
+    <input type="button" value="Tiger" onclick="showZooAnimal('Tiger.jpg');"/> <br>
     <br>
     <br>
     <br>
-    <input id="helpButton" type="button" value="Show Help" onclick="displayMessage()">
+    <input id="helpButton" type="button" value="Show Help" onclick="displayMessage()"/>
       
   </form>
 
